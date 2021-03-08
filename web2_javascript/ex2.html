@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick 속성의 속성 값으로는 무조건 javascript가 와야함 -->
+    <!-- onclick 속성의 속성 값은 웹브라우저가 기억하고 있다가 onclick 속성이 위치한 태그가 동작할 때 js 코드를 js 문법을 해석해 웹브라우저가 동작 -->
+    <input type="button" value="hi" onclick="alert('hi')">
+    <!-- text box 안에서 값이 변경되면 경고창 출력 -->
+    <!-- 이 때 무조건 값이 '변경' 되어야지만 경고창이 출력됨 -->
+    <input type="text" onchange="alert('changed')">
+    <!-- text box 안에서 키를 클릭하면 경고창 출력 -->
+    <input type="text" onkeydown="alert('key down!')">
+    <script>
+        // indexOf : 문자가 어디서부터 시작하는지 숫자로 알려줌
+        document.write('덕현이는 오늘도 코딩중!'.indexOf('오늘도'));
+        // trim : 공백을 없애줌
+        document.write('덕현이는              오늘도                   코딩중!'.trim());
+        // toUpperCase : 소문자를 대문자로 만들어줌
+        document.write('deokhyeon'.toUpperCase());
+    </script>
+</body>
+</html>
