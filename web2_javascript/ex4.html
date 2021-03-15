@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+        
+    </ul>
+    <!-- 함수는 입력과 출력으로 이루어져 있는데 Parameter(매개변수), Argument(인자)는 입력, Return은 출력 -->
+    <h2>Parameter & Argument</h2>
+    <script>
+        // 언제나 똑같이 실행되는 함수, 전혀 실용적이지 않음
+        function onePlusOne(){
+            document.write(1+1+'<br>');
+        }
+        onePlusOne();
+        // Parameter : 인자를 받아 함수 안으로 매개해주는 변수
+        function sum(x,y){
+            document.write(x+y+'<br>');
+        }
+        function sumColorRed(x,y){
+            document.write('<div style="color:red">'+x,y+'</div><br>');
+        }
+        // Argument : 인자, 실제로 매개변수에 전달되는 값
+        sum(2,5);
+        sum(2,5);
+        sumColorRed(2,3);
+    </script>
+    <h2>Return</h2>
+    <script>
+        function sum2(x,y){
+            return x+y;
+        }
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:powderblue">'+sum2(3,5)+'</div>')
+        document.write('<div style="font-size:3rem">'+sum2(3,5)+'</div>')
+    </script>
+</body>
+</html>

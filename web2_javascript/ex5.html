@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 배열은 순서대로 정보를 가지고 있지만, 객체는 그렇지 않음 -->
+    <!-- 객체 : '이름이 있는 정리정돈 상자' -->
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            "programmer":"egoing",
+            "designer":"leezche"
+        };
+        document.write("programmer : "+coworkers.programmer+"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <!-- 객체의 모든 키와 값을 가져오려면 for in 을 사용 -->
+    <script>
+        for(var key in coworkers) {
+            document.write(key+" : "+coworkers[key]+'<br>');
+        }
+    </script>
+    <!-- Property : 객체에 소속된 변수(예를 들어 Key (programmer, designer ...)) -->
+    <!-- Method : 객체에 소속된 함수 -->
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function(){
+            for(var key in this) {
+                document.write(key+" : "+this[key]+'<br>');
+            }
+        }
+        coworkers.showAll();
+    </script>
+</body>
+</html>
