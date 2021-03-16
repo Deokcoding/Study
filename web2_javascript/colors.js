@@ -1,21 +1,24 @@
 var Body = {
     setColor:function(color){
-      document.querySelector('body').style.color = color; // querySelector처럼 객체 안에 들어 있는 함수는 메소드(Method)라고 부름
+      // document.querySelector('body').style.color = color; // querySelector처럼 객체 안에 들어 있는 함수는 메소드(Method)라고 부름
+      $('body').css('color', color);
     },
     setBackgroundColor:function(color){
-      document.querySelector('body').style.backgroundColor = color;
+      // document.querySelector('body').style.backgroundColor = color;
+      $('body').css('backgroundColor', color);
     }
   }
 
   var Links = {
     setColor:function(color){
       // html 문서 안의 a 태그의 색깔을 모두 powderblue로 바꿈
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = color;
-        i = i + 1;
-      }
+      // var alist = document.querySelectorAll('a');
+      // var i = 0;
+      // while(i < alist.length){
+        // alist[i].style.color = color;
+        // i = i + 1;
+      // }
+      $('a').css('color', color);
     }
   }
 
